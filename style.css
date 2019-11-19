@@ -1,0 +1,156 @@
+/* remove rules not needed because of normalize */
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    background: #393874;
+}
+body {
+    overflow-x: hidden;
+}
+.wrapper {
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+}
+
+.wrapper.animate {
+    animation: unblur 3s forwards alternate 5;
+}
+
+.blurred {
+    filter: blur(5px);
+}
+
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-gradient {
+    background: rgb(96,94,133);
+    background: radial-gradient(farthest-corner at 100% 0, rgba(62,60,110,1) 0%, rgba(45,45,131,1) 60%, rgba(0,0,73,1) 100%);
+}
+
+.intro-text {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    color: inherit;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+}
+
+.button-scroll {
+    position: relative;
+    display: block;
+    width: 1.1em;
+    height: 1.1em;
+    margin: 0.5em auto 0;
+    cursor: pointer;
+    background: url('./arrow.svg') no-repeat;
+    background-size: cover;
+    animation: bounce 5s ease-out;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+.button-scroll object {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes unblur {
+    0%, 20% {
+        color: rgba(255, 255, 255, 0);
+        filter: blur(10px);
+    }
+    70%, 100% {
+        color: rgba(255, 255, 255, 1);
+        filter: blur(0);
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Teko', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    background: white;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    2% {
+        transform: translateY(-50%);
+    }
+    5% {
+        transform: translateY(0%);
+    }
+    8% {
+        transform: translateY(-40%);
+    }
+    11% {
+        transform: translateY(0%);
+    }
+    14% {
+        transform: translateY(-30%);
+    }
+    17% {
+        transform: translateY(0%);
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    23% {
+        transform: translateY(0%);
+    }
+    26% {
+        transform: translateY(-15%);
+    }
+    29% {
+        transform: translateY(0%);
+    }
+    32% {
+        transform: translateY(-10%);
+    }
+    35% {
+        transform: translateY(0%);
+    }
+    38% {
+        transform: translateY(-5%);
+    }
+    41% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
